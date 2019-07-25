@@ -14,6 +14,7 @@
         <module>springcloud-provider-product</module>
         <module>springcloud-consumer-product</module>
         <module>springcloud-security</module>
+        <module>springcloud-eureka</module>
     </modules>
 
     <properties>
@@ -72,6 +73,7 @@
             </resource>
         </resources>
         <plugins>
+            <!--解析$符号变为可识别的,yml配置文件中springboot的监控变量获取-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>

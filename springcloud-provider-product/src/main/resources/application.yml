@@ -17,4 +17,18 @@ logging:
   level:
     wjt.mapper: debug
 
+eureka:
+  client: # 客户端进行Eureka注册的配置
+    service-url:
+      defaultZone: http://admin:admin@localhost:7001/eureka
+  instance: # 实例
+    instance-id: springcloud-provider-product #名称
+    prefer-ip-address: true #ip
+    lease-renewal-interval-in-seconds: 2 # 设置心跳的时间间隔（默认是30秒）
+    lease-expiration-duration-in-seconds: 5  # 如果现在超过了5秒的间隔（默认是90秒）
 
+info: #springboot 监控
+  app.name: springcloud-provider-product
+  company.name: wjt
+  build.artifactId: $project.artifactId$
+  build.modelVersion: $project.modelVersion$
