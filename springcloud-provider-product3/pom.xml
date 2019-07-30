@@ -8,17 +8,22 @@
         <groupId>wjt</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-   <version>1.0.0</version>
 
-    <artifactId>springcloud-consumer-product</artifactId>
+    <artifactId>springcloud-provider-product3</artifactId>
+    <version>1.0.0</version>
+
     <dependencies>
         <dependency>
-            <groupId>wjt</groupId>
-            <artifactId>springcloud-api</artifactId>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
         </dependency>
         <dependency>
-            <groupId>wjt</groupId>
-            <artifactId>springcloud-security</artifactId>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
         </dependency>
 
         <dependency>
@@ -35,9 +40,25 @@
             <artifactId>spring-boot-devtools</artifactId>
         </dependency>
 
+        <!--公共类模块-->
+        <dependency>
+            <groupId>wjt</groupId>
+            <artifactId>springcloud-api</artifactId>
+        </dependency>
+        <!--安全模块-->
+        <dependency>
+            <groupId>wjt</groupId>
+            <artifactId>springcloud-security</artifactId>
+        </dependency>
+        <!--Eureka客户端-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+        <!--Springboot监控-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
     </dependencies>
 

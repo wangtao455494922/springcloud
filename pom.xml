@@ -12,6 +12,8 @@
     <modules>
         <module>springcloud-api</module>
         <module>springcloud-provider-product</module>
+        <module>springcloud-provider-product2</module>
+        <module>springcloud-provider-product3</module>
         <module>springcloud-consumer-product</module>
         <module>springcloud-security</module>
         <module>springcloud-eureka</module>

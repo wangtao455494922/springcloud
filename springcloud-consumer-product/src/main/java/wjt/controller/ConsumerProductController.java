@@ -14,9 +14,9 @@ import java.util.List;
 @RestController
 @RequestMapping("/consumer")
 public class ConsumerProductController {
-    public static final String PRODUCT_GET_URL = "http://localhost:8080/prodcut/get/";
-    public static final String PRODUCT_LIST_URL="http://localhost:8080/prodcut/list/";
-    public static final String PRODUCT_ADD_URL = "http://localhost:8080/prodcut/add/";
+    public static final String PRODUCT_GET_URL = "http://SPRINGCLOUD-PROVIDER-PRODUCT/prodcut/get/";
+    public static final String PRODUCT_LIST_URL = "http://SPRINGCLOUD-PROVIDER-PRODUCT/prodcut/list/";
+    public static final String PRODUCT_ADD_URL = "http://SPRINGCLOUD-PROVIDER-PRODUCT/prodcut/add/";
     @Resource
     private RestTemplate restTemplate;
 
