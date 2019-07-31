@@ -23,7 +23,7 @@ public class ConsumerProductController {
     @Resource
     private HttpHeaders httpHeaders;
 
-    @RequestMapping("/product/get")
+    /*@RequestMapping("/product/get")
     public Object getProduct(long id) {
         Product product = restTemplate.exchange(PRODUCT_GET_URL + id, HttpMethod.GET,new HttpEntity<Object>(httpHeaders), Product.class).getBody();
         return  product;
@@ -41,5 +41,5 @@ public class ConsumerProductController {
         Boolean result = restTemplate.exchange(PRODUCT_ADD_URL, HttpMethod.POST,
                 new HttpEntity<Object>(product,httpHeaders), Boolean.class).getBody();
         return  result;
-    }
+    }*/
 }

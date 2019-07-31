@@ -1,5 +1,6 @@
 package wjt.config;
 
+import com.netflix.loadbalancer.IRule;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -20,11 +21,21 @@ public class RestConfig {
     @Bean
     public HttpHeaders getHeaders() { // 要进行一个Http头信息配置
         HttpHeaders headers = new HttpHeaders(); // 定义一个HTTP的头信息
-        String auth = "admin:000000"; // 认证的原始信息
+        String auth = "admin:admin"; // 认证的原始信息
         byte[] encodedAuth = Base64.getEncoder()
                 .encode(auth.getBytes(Charset.forName("US-ASCII"))); // 进行一个加密的处理
         String authHeader = "Basic " + new String(encodedAuth);
         headers.set("Authorization", authHeader);
         return headers;
     }
+    /*
+    *
+    * 全局路由配置,去掉启动类中的如下配置
+    *
+    * @RibbonClient(name ="SPRINGCLOUD-PROVIDER-PRODUCT",configuration = RibbonConfig.class)
+    * */
+    /*@Bean
+    public IRule ribbonRule(){
+        return  new com.netflix.loadbalancer.RandomRule(); //随机,默认是轮训
+    }*/
 }

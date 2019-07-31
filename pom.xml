@@ -17,6 +17,8 @@
         <module>springcloud-consumer-product</module>
         <module>springcloud-security</module>
         <module>springcloud-eureka</module>
+        <module>springcloud-service</module>
+        <module>springcloud-feign</module>
     </modules>
 
     <properties>
@@ -61,6 +63,12 @@
             <dependency>
                 <groupId>wjt</groupId>
                 <artifactId>springcloud-security</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+            <!--feign的service模块  -->
+            <dependency>
+                <groupId>wjt</groupId>
+                <artifactId>springcloud-service</artifactId>
                 <version>1.0.0</version>
             </dependency>
         </dependencies>

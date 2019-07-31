@@ -8,12 +8,17 @@
         <outputRelativeToContentRoot value="true" />
         <module name="springcloud-consumer-product" />
         <module name="springcloud-eureka" />
+        <module name="springcloud-provider-product2" />
+        <module name="springcloud-provider-product3" />
         <module name="springcloudapi" />
+        <module name="springcloudfeign" />
         <module name="springcloudproviderproduct" />
         <module name="springcloudsecurity" />
+        <module name="springcloudservice" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="springcloudconsumerfeign" target="1.8" />
       <module name="springcloudconsumerproduct" target="1.8" />
       <module name="springcloudeureka" target="1.8" />
     </bytecodeTargetLevel>
